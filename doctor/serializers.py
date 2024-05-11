@@ -5,7 +5,7 @@ class DoctorSerializers(serializers.ModelSerializer):
     user=serializers.StringRelatedField(many=False)
     specialization=serializers.StringRelatedField(many=True)
     designation=serializers.StringRelatedField(many=True)
-    department=serializers.StringRelatedField(many=False)
+    department=serializers.StringRelatedField(many=True)
     class Meta:
         model= models.Doctor
         fields ='__all__'
