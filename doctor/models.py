@@ -28,7 +28,7 @@ class Doctor(models.Model):
     image=models.ImageField(upload_to="doctor/images/")
     designation=models.ManyToManyField(Designation)
     specialization=models.ManyToManyField(Specialization)
-    department=models.ForeignKey(Department, on_delete=models.CASCADE)
+    department=models.ManyToManyField(Department)
     fee=models.IntegerField()
     time =models.CharField(max_length=100)
     meet_link=models.CharField(max_length=200)

@@ -138,10 +138,6 @@ STATIC_ROOT = BASE_DIR / 'staticfiles' ## i have to add this fo deploying in ren
 # and then give this commad    py manage.py collectstatic
 
 
-STATICFILES_DIRS = [
-    BASE_DIR/'static',
-]
-
 
 
 # Default primary key field type
