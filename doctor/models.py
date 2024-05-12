@@ -40,6 +40,7 @@ class Doctor(models.Model):
 class Review(models.Model):
     reviewer = models.ForeignKey(Patient, on_delete=models.CASCADE)
     body=models.TextField()
+    image=models.ImageField(upload_to="doctor/images/", null=True)
     
    
     
