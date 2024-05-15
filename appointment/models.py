@@ -7,7 +7,7 @@ class Appointment(models.Model):
     patient= models.ForeignKey(Patient, on_delete=models.CASCADE)
     name=models.CharField(max_length=50)
     email=models.EmailField(max_length=100)
-    doctor= models.ManyToManyField(Doctor)
+    doctor= models.ForeignKey(Doctor, on_delete=models.CASCADE, null=True)
     department=models.ForeignKey(Department, on_delete=models.CASCADE)
     date=models.DateField()
     time=models.TimeField()
