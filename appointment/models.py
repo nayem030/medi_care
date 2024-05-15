@@ -6,7 +6,7 @@ from patient.models import Patient
 class Appointment(models.Model):
     name=models.CharField(max_length=50)
     email=models.EmailField(max_length=100)
-    doctor= models.CharField(max_length=100)
+    doctor= models.ForeignKey(Doctor, on_delete=models.CASCADE)
     department=models.ForeignKey(Department, on_delete=models.CASCADE)
     date=models.DateField()
     time=models.TimeField()
