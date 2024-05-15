@@ -12,4 +12,4 @@ class Appointment(models.Model):
     time=models.TimeField()
     
     def __str__(self):
-        return f"Doctor : {self.doctor.user.first_name} Patient: {self.patient.user.first_name}"
+        return f"Doctor : {self.doctor.user.first_name} Patient: {self.name}"

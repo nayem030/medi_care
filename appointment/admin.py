@@ -3,10 +3,7 @@ from . import models
 # Register your models here.
 
 class AppointmentAdmin(admin.ModelAdmin):
-    list_display=['doctor_name', 'patient_name',  'time', 'date',]
-    
-    def patient_name(self,obj):
-        return obj.patient.user.first_name
+    list_display=['doctor_name', 'name' ,'time', 'date',] 
     def doctor_name(self,obj):
         return obj.doctor.user.first_name
     
