@@ -4,7 +4,6 @@ from patient.models import Patient
 # Create your models here.
 
 class Appointment(models.Model):
-    patient= models.ForeignKey(Patient, on_delete=models.CASCADE)
     name=models.CharField(max_length=50)
     email=models.EmailField(max_length=100)
     doctor= models.ForeignKey(Doctor, on_delete=models.CASCADE, null=True)
